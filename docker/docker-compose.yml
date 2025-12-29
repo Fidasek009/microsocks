@@ -1,0 +1,9 @@
+services:
+  microsocks:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    image: ${IMAGE:-microsocks}:${TAG:-latest}
+    ports:
+      - "1080:1080"
+    restart: unless-stopped
