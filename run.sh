@@ -75,7 +75,7 @@ start() {
     fi
 
     echo "Starting microsocks in background..."
-    nohup "$PROG" "${args[@]}" > "$LOG_FILE" 2>&1 &
+    nohup setsid "$PROG" "${args[@]}" > "$LOG_FILE" 2>&1 < /dev/null &
     echo $! > "$PID_FILE"
     
     local url="socks5h://"
