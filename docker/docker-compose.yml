@@ -7,3 +7,4 @@ services:
     ports:
       - "1080:1080"
     restart: unless-stopped
+    command: -u ${MICROSOCKS_USER:-user} -P ${MICROSOCKS_PASS:-password}
