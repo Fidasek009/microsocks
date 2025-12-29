@@ -1,0 +1,27 @@
+image:
+  repository: ghcr.io/fidasek009/microsocks
+  pullPolicy: IfNotPresent
+  tag: "latest"
+
+service:
+  type: LoadBalancer
+  port: 1080
+
+auth:
+  enabled: false
+  user: ""
+  password: ""
+
+resources:
+  limits:
+    cpu: 100m
+    memory: 64Mi
+  requests:
+    cpu: 10m
+    memory: 32Mi
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
